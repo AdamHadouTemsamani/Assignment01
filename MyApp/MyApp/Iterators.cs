@@ -17,15 +17,17 @@ public static class Iterators
 
     public static IEnumerable<T> Filter<T>(IEnumerable<T> items, Predicate<T> predicate)
     {
-        predicate = Predicate
-        foreach(IEnumerable<T> i in items)
+        foreach(var i in items)
         {
-            if(predicate){
+            if(predicate(i))
+            {
                 yield return i;
             }
         }
     }
-    public delegate bool Predicate<in T>(T obj);
+
+    //static bool Even(int i) => i % 2 == 0;
+    
 
 
 
