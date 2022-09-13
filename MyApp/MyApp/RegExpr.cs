@@ -32,8 +32,7 @@ public static class RegExpr
         var matches = Regex.Matches(html,pattern);
         foreach(Match m in matches)
         {
-            var innerText = Regex.Replace(m.ToString(),@"[^>](?<=\<)(.*?)(?=\>)[^<]", "");
-            yield return innerText;
+            yield return Regex.Replace(m.ToString(),@"[^>](?<=\<)(.*?)(?=\>)[^<]", "");
         }
     }
 
