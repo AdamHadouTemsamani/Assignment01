@@ -25,11 +25,5 @@ public static class Iterators
             }
         }
     }
-
-    //static bool Even(int i) => i % 2 == 0;
-    
-
-
-
     
 }
